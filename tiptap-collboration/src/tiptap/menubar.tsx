@@ -136,18 +136,6 @@ export const MenuBar = ({ editor }: { editor: Editor | null }) => {
         <button onClick={() => editor.chain().focus().setHardBreak().run()}>
           Hard break
         </button>
-        <button
-          onClick={() => editor.chain().focus().undo().run()}
-          disabled={!editorState.canUndo}
-        >
-          Undo
-        </button>
-        <button
-          onClick={() => editor.chain().focus().redo().run()}
-          disabled={!editorState.canRedo}
-        >
-          Redo
-        </button>
       </div>
     </div>
   );
